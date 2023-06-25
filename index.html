@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="stylePort.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <script src="https://kit.fontawesome.com/d426f73647.js" crossorigin="anonymous"></script>
+</head>
+<body>
+     <div id="header">
+        <div class="container">
+        <nav>
+           <h1>Welcome</h1>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Portfolio</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <div class="header-first">Hello my name is</div>
+            <div class="header-second text animate__animated animate__zoomIn animate__delay-1s">Neha Kumari</div>
+            <div class="header-third">And I'm a UI-Developer</div>
+        </div>
+        </div>
+     </div>
+<!-- about -->
+     <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="businessman-character-avatar-isolated_24877-60111.avif" alt="">
+                </div>
+                <div class="about-col-2">
+                    <About class="Sub-title">About Me</h1><br>
+                        <br><br><p>I am a passionate and dedicated Computer Science Engineering (CSE) student, currently focused on mastering Data Structures and Algorithms (DSA) and frontend development. With a keen interest in technology, I am constantly eager to explore and learn new advancements in the field. I strive to leverage my skills and knowledge to create innovative solutions and contribute to the ever-evolving world of technology.</p>
+
+                        <div class="tab-tiltle">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experince</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-content active-tab" id="skills">
+                            <ul>
+                                <li><span>UI/UX</span><br>Designing Web/App interface</li>
+                                <li><span>Web Development</span><br>Web app Development</li>
+                                <li><span>App Development</span><br>Building Android/iOS apps</li>
+
+                            </ul>
+                        </div>
+                        <div class="tab-content" id="experience">
+                            <ul>
+                                <li><span>Project</span><br>Landing Page<br>Amazon Clone</li>
+                                <li><span>Frontend</span><br>HTML CSS Javascript</li>
+                                <li><span>Internship</span><br>Intenship at Oasis Infobyte</li>
+
+                            </ul>
+                        </div>
+                        <div class="tab-content" id="education">
+                            <ul>
+                                <li><span>Current</span><br>CSE student 2year</li>
+                                <li><span>Class 12</span><br>Pass out in 2021 with 84% in CBSE board</li>
+                                <li><span>Class 10</span><br>Pass out in 2019 with 80% in CBSE board</li>
+
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+     </div>
+
+     <!-- ---------service----------- -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Sevices</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo esse ex repudiandae expedita.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-crop"></i>
+                <h2>UI/UX Design</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo esse ex repudiandae expedita.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store-ios"></i>
+                <h2>App Design</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo esse ex repudiandae expedita.</p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ---------Contact-------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-share-from-square"></i>contact@example.com</p>
+                <p><i class="fa-sharp fa-solid fa-square-phone"></i>0123456789</p>
+                <div class="social-icon">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter-square"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                </div><br>
+                <a href="download.jpg" download class="btn btn2">Download CV</a>
+            </div>
+              
+
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+     <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontent=document.getElementsByClassName("tab-content");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tablink of tabcontent){
+                tablink.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+     </script>
+</body>
+</html>
